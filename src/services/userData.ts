@@ -5,11 +5,6 @@ import type { SavedLocation } from '@/types/location';
 import type { UserData } from '@/types/user';
 import { db, functions } from './firebase';
 
-// Firestore layout:
-//   users/{uid}                  { locations, alertsEnabled, updatedAt }
-//   users/{uid}/devices/{token}  { token, platform, updatedAt }  push tokens for alerts
-//   users/{uid}/alerts/{id}      written by the sendWeatherAlerts Cloud Function
-
 function requireDb() {
   if (!db) throw new Error('Firebase is not configured.');
   return db;

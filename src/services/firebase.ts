@@ -4,8 +4,7 @@ import { getAuth, getReactNativePersistence, initializeAuth, type Auth } from 'f
 import { getFirestore, initializeFirestore, type Firestore } from 'firebase/firestore';
 import { getFunctions, type Functions } from 'firebase/functions';
 
-// Values come from your Firebase web app config (Project settings > Your apps).
-// Put them in a .env.local file; see .env.example.
+// Values come from Firebase web app config 
 const firebaseConfig = {
   apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN,
